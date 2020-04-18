@@ -16,7 +16,7 @@ class Form extends Component{
     }
 
     fetchPosts = async () => {
-        let response = await fetch('http://204.48.20.245/posts')
+        let response = await fetch('https://getyouanerd.com/posts')
         let data = await response.json()
         console.log(data)
         this.setState({posts: data})
@@ -24,7 +24,7 @@ class Form extends Component{
 
     handleCreate = async (createData) => {
         console.log(createData);
-    let response = await fetch('http://204.48.20.245/posts',
+    let response = await fetch('https://getyouanerd.com/posts',
     {
       body: JSON.stringify(createData),
       method: 'POST',

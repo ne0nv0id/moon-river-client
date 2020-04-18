@@ -8,7 +8,7 @@ class Feed extends Component {
     }
 
     getPosts = async () => {
-        let response = await fetch('http://204.48.20.245/posts')
+        let response = await fetch('https://getyouanerd.com/posts')
         let data = await response.json()
         console.log(data)
         this.setState({posts: data})
